@@ -1,0 +1,194 @@
+Block Elements (Most Commonly Used First)
+
+<div>: A generic container for flow content.
+<p>: Paragraph.
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>: Headings.
+<ul>: Unordered list.
+<ol>: Ordered list.
+<li>: List item.
+<form>: A section containing form controls.
+<table>: Table.
+<section>: A standalone section of a document.
+<header>: A container for introductory content or a set of navigational links.
+<footer>: Footer of a section or page.
+<nav>: A section of a page that contains navigation links.
+<article>: A self-contained composition in a document.
+<aside>: A section of a page that contains information indirectly related to the main content.
+<main>: The main content of a document.
+<fieldset>: A set of form controls grouped under a common name.
+<blockquote>: A block of text that is a quotation from another source.
+<pre>: Preformatted text.
+<canvas>: A container used to draw graphics via JavaScript.
+<dl>: Description list.
+<dt>: Term in a description list.
+<dd>: Description in a description list.
+<figure>: Any content that is referenced from the main content.
+<figcaption>: A caption for a <figure> element.
+<address>: Contact information for the author or owner of the document.
+<hr>: A thematic break or a horizontal rule.
+<tfoot>: Footer of a table.
+
+
+
+Inline Elements (Most Commonly Used First)
+<a>: Anchor or hyperlink.
+<img>: Image.
+<span>: Generic inline container.
+<input>: Input field.
+<label>: Label for a form element.
+<strong>: Strong emphasis.
+<em>: Emphasized text.
+<br>: Line break.
+<code>: Code snippet.
+<b>: Bold text.
+<i>: Italic text.
+<u>: Underlined text.
+<small>: Smaller text.
+<sub>: Subscript.
+<sup>: Superscript.
+<mark>: Marked or highlighted text.
+<q>: Short inline quotation.
+<cite>: Citation.
+<kbd>: Keyboard input.
+<samp>: Sample output.
+<var>: Variable in a mathematical expression or programming context.
+<time>: Time.
+<abbr>: Abbreviation.
+<data>: Machine-readable translation of content.
+<acronym>: Acronym (Not supported in HTML5).
+
+
+
+
+
+Block-Level Tags
+🔥 Most Commonly Used
+
+<div> – Generic container, most used for layouts, wrappers, sections.
+
+<p> – Paragraph, essential for text.
+
+<h1> … <h6> – Headings, for document structure & SEO.
+
+<ul>, <ol>, <li> – Lists, very common in menus & content.
+
+<table>, <tr>, <td>, <th> – Tabular data. Still used in reports, dashboards, and even in HTML emails.
+
+<form> – Wrapper for form inputs.
+
+👍 Regularly Used
+
+<section> – Groups related content.
+
+<article> – Self-contained content (blogs, news, etc.).
+
+<header> – Page or section header (logo, nav, intro).
+
+<footer> – Page or section footer.
+
+<main> – The main content of the page (important for accessibility).
+
+<nav> – Menus/navigation links.
+
+<figure> + <figcaption> – Used for images/charts with captions.
+
+<pre> – For code snippets, preserves whitespace.
+
+<hr> – Horizontal divider.
+
+👀 Rarely Used
+
+<address> – Contact details (semantic, but underused).
+
+<aside> – Sidebar or related info.
+
+<dl>, <dt>, <dd> – Definition lists, rarely used outside glossaries.
+
+<canvas> – Graphics/drawings (used in apps, not normal sites).
+
+<noscript> – Alternative content if JS is disabled.
+
+<video> – Embedded videos, used less often than <iframe> (e.g., YouTube embeds).
+
+<tfoot> – Part of tables, but not always needed.
+
+📌 Inline Tags
+🔥 Most Commonly Used
+
+<a> – Links (core of the web).
+
+<span> – Generic inline wrapper, used everywhere with CSS/JS.
+
+<strong> – Semantic bold (important text).
+
+<em> – Semantic italic (emphasis).
+
+<img> – Images (essential for design/content).
+
+<br> – Line breaks in text.
+
+<input> – Most important inline form element.
+
+<label> – Label for form fields (improves usability).
+
+<button> – Common for actions (forms, JS events).
+
+<textarea> – Multiline text input (comments, messages).
+
+<select> + <option> – Dropdowns.
+
+👍 Regularly Used
+
+<i> – Italic text, mostly for icons (e.g., Font Awesome).
+
+<b> – Bold, stylistic (not semantic).
+
+<small> – Legal text, footnotes.
+
+<u> – Underline, rarely for text, sometimes for links.
+
+<time> – Dates/times with machine-readable format.
+
+<mark> – Highlight text (like a yellow marker).
+
+<code> – Inline code (developers/docs).
+
+<kbd> – Keyboard input (docs).
+
+<samp> – Sample output (technical docs).
+
+<var> – Variables in code/math.
+
+<sub>, <sup> – Subscript/superscript (H₂O, x²).
+
+👀 Rarely Used
+
+<abbr> – Abbreviations (tooltip on hover).
+
+<cite> – Citations for works.
+
+<q> – Short inline quotes.
+
+<bdo> – Bi-directional override (used for RTL/LTR languages).
+
+<data> – Machine-readable data.
+
+<output> – Result of calculations in forms.
+
+<progress> – Progress bar.
+
+<meter> – Gauge meter.
+
+<map> + <area> – Image maps (very old school).
+
+<ruby>, <rt>, <rp> – Ruby text for East Asian languages.
+
+<script> – JS, technically inline but often placed in <head> or before </body>.
+
+<template> – Hidden HTML fragments for JS to use.
+
+<wbr> – Suggests a line break opportunity.
+
+<picture> – Advanced responsive image handling.
+
+<svg> – Inline vector graphics.
