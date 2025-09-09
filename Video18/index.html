@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Box Model - Margin, Padding & Borders</title>
+    <link rel="icon" type="image/png" href="/testfolder/image.png">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        background-color: lightgray;
+    }
+    .box{
+        background-color: blue;
+    }
+    .box1{
+        padding: 20px;
+        margin: 20px;
+        color:green;
+        border: 5px solid, yellow;
+        background-color:aqua;
+        height: 200px;
+        box-sizing: border-box;         /*its mean that height of box is 200px. in 200 px margin and padding included. if we do not add this property its mean only box height will be 200 not included padding and border  */
+        /* but margin will be not included in all situations */
+
+    }
+</style>
 </head>
+
+
 <body>
-    
+<div class="box box1">I am a box</div>
+<div class="box box2">I am second box</div>
+
+
 </body>
+
 </html>
