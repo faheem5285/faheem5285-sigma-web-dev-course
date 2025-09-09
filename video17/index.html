@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors MasterClass</title>
+    <style>
+        /* this is Universal selecter */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* this is an Element Selector */
+        div {
+            background-color: aqua;
+            font-size: 40px;
+        }
+
+        /* this is a Class Selector, it changes elements with a class */
+        .classsecter {
+            background-color: rgb(48, 1, 48);
+            color: white;
+        }
+
+        /* this is an Id Selector, it changes elements by their id */
+        #IdSelecter {
+            background-color: blue;
+            color: white;
+        }
+
+        /* Here  we know about child selecters*/
+        /* Child selecters are those whos work only in tags in tags */
+        div>p {
+            background-color: blueviolet;
+        }
+/* if tags in tag more then one  then we follow this sequence of styling Elements */
+        div > span > p {
+            background-color: rgb(235, 3, 22);
+        }
+        /* if i want  that find this tag in whole child tags no problem this is child or sub child tag if you find this tag just apply on it*/
+        /* we say this metthod Descendant selecter */
+        div p{
+            background-color: darkorange;
+        }
+
+        /* pseudo Element */
+        /* these used for different types of task like see link visited or not visited */
+        a:link{
+            color: rgb(80, 226, 43);
+        }
+        a:visited{
+            color: brown;
+        }
+        a:active{
+            background-color: chartreuse;
+        }
+        a:hover{
+            background-color: rgb(63, 36, 0);
+        }
+        p:first-child{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <Div class="hello">
+            <p>Hello Here i am a p tag</p>
+            <p>Hello Here i am second p tag</p>
+        </Div>
+</main>
+    <div>
+        I am a Div and I am using an Element Selector to look different from others
+    </div>
+    <div class="classsecter">
+        I am also a Div and I am using a Class Selector to look different from others
+    </div>
+    <div id="IdSelecter">
+        I am also a Div and I am using an Id Selector to look different from others
+    </div>
+
+    <div>
+        I am also a Div and I am using an child Selector with tha name &ltp&gt &lt/p&gt to look different from others
+        <p>&ltp&gt I am a child selecter&lt/p&gt</p>
+    </div>
+    <div>
+        I am also a Div and I am using an child Selector with tha name &ltp&gt &lt/p&gt to look different from others<br>
+        <span>this is a span tag 
+            <p>&ltp&gt I am a child selecter&lt/p&gt</p>
+        </span>
+    </div>
+      <div>
+        I am also a Div and I am using an child Selector with tha name &ltp&gt &lt/p&gt to look different from others<br>
+        <span>this is a span tag 
+            <h4>
+            <p>&ltp&gt I am a child selecter&lt/p&gt</p>
+            </h4>
+        </span>
+    </div>
+    <div>
+        Here we see which link visted and which not
+        <a href="http://www.google.com" target="_blank">Go to Google</a> 
+    </div>
+</body>
+</html>
