@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Fonts, Text & Color Properties</title>
+    <!-- here is two way of adding external fonts from googles -->
+     <!-- one why is this to copy tags and add -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* second way is this where we just import url */
+        /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+        h1 {
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-style: italic;
+            font-weight: 900;
+            text-decoration:underline;
+        }
+
+        p:first-child{
+            font-family: roboto;
+            font-weight: 500;
+            text-decoration: overline;
+            text-decoration-color: bisque;
+            text-decoration-thickness:44%;
+            text-decoration-style: dotted;
+        }
+        p{
+            font-family: roboto;
+            line-height: 1.9;
+        }
+        h4{
+            letter-spacing: 20px;
+        }
+         h5{
+            word-spacing: 20px;
+        }
+        h6{
+            text-transform: capitalize;
+        }
+        .capitalize{
+            text-transform: uppercase;
+        }
+        .abc{
+            text-indent: 6%;
+            width: 50px;
+            border: 2px solid red;
+            text-overflow: ellipsis;
+            /* text-overflow:inherit; */
+            /* overflow: hidden; */
+            word-break: break-all;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>Font Heading</h1>
+    <div>
+    <p>This is a Paragraph</p>
+    </div>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos aperiam perspiciatis similique quam, dolorum voluptates iusto commodi delectus modi id possimus molestiae, minima error reiciendis rem! Tenetur, similique! Error, ratione!
+    </p>
+    <h4>Here We will add spacing</h4>
+    <h5>Here we will se Word spacing</h5>
+    <h6>here all word first letter will autometically capitalize</h6>
+    <h3 class="capitalize">here all word all letter will autometically capitalize</h3>
+<p class="abc">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos aperiam perspiciatis similique quam, dolorum voluptates iusto commodi delectus modi id possimus molestiae, minima error reiciendis rem! Tenetur, similique! Error, ratione!
+    </p>
 </body>
+
 </html>
