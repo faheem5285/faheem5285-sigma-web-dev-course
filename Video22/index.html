@@ -1,11 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Sizing Units - px, rem, em, vh, vw, % & more</title>
+    <style>
+        /* px depends on resolution,
+vh vw are device specific,
+vmin and vmax depends on orientation,
+em is multiplier on current value,
+rem is a multiplier on current value in respective to the root element,
+% depends on parent */
+        * {
+            margin: 0;
+            padding: 0%;
+        }
+
+        /* step 1 */
+        .px {
+            box-sizing: border-box;
+            /* this tell box add box border, padding, margin in box width and height and not out side */
+            border: 2px solid black;
+            width: 200px;
+
+        }
+
+        /* step 2 */
+        .vw {
+            /*   vw use for providing affect on screen according to screen % i mean (this will show on 80% of Screen no problem screen is small or large) */
+            width: 80vw;
+            background-color: aqua;
+            margin: auto;
+            /*this use for provide same margin on both sides but this only work on block elements not on inline elements*/
+        }
+
+        /* step 3 */
+        /* margin auto not work on inline element */
+        .inline {
+            background-color: rgb(124, 9, 231);
+            margin: auto;
+        }
+
+        /* step 4 */
+        /* how to show inline elements in center. you can use container */
+        .container {
+            background-color: rgb(213, 168, 255);
+            margin: auto;
+            width: 80vw;
+        }
+
+        .vh {
+            background-color: blueviolet;
+            height: 10vh;
+            padding: 10%;
+        }
+
+
+        /* step 5 */
+        .cont-rem-em {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 16px;
+            background-color: rgb(231, 36, 29);
+
+        }
+
+        /*  Here Font will be remain same as we add in class i mean if we add font 16px here will remain 16 */
+        .cont-em {
+
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(127, 255, 212, 0.411);
+        }
+
+        /* Child tag. Here we will Learn About em And rem. here font will be change or you can say that font will inherit from parent tag if we use em size unit in font size of this child font size. if we give font size 16 px in parent tag and we give 2em in child this will increase with 2*16 and if we give 3em this will be 3*16 and also if we give 0.3*16 also show small */
+        .cont-rem-em p {
+            font-size: 2em;
+        }
+
+        .cont-rem {
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(150, 127, 255, 0.562);
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        /* Child tag. Here font will also change, but unlike em, rem is based on the root (html) font size, not parent. For example, if the root html has font-size: 16px;
+                - 2rem = 2 * 16 = 32px
+                - 3rem = 3 * 16 = 48px
+                - 0.3rem = 0.3 * 16 = 4.8px (smaller)
+                So rem always refers to root font size and ignores parent inheritance. */
+        .cont-rem p {
+            font-size: 3rem;
+        }
+
+
+        /* step 6 */
+        /* vmix and vmin is depand on screen viewport. if size(viewport) of screen on desktop width of screen is this and height of screen this then show this. if you give. i mean if you give height this will convert in width in mobile and if give width for mobile this will convert into height in desktop. this whole depend on screen viewport  */
+        .cont-vmi-vmax {
+            background-color: aqua;
+            text-align: center;
+
+        }
+
+        .cont-vmin {
+            background-color: chartreuse;
+            height: 10vmin;
+            height: 20vmax;
+        }
+
+        /* step 7 */
+        .min-width {
+            min-height: 80vh;
+            max-width: 80vw;
+        }
+
+        /* step 8 */
+        /* % (percentage) units in CSS
+   - The size of a child element is relative to its parent element.
+   - Example: If a parent has 80% width of the page, and the child has 80% width,
+     then the child's width will be 80% of the parent’s width (not the page). */
+        .parentpcntg {
+            border: 1px solid black;
+            width: 80vw;
+        }
+
+        .childpcntg {
+            width: 80%;
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1 class="px">Hello this is a box</h1>
+    <h1 class="vw">Hello this is a box</h1>
+    <h1 class="vh">Hello this is a box</h1>
+    <span class="inline">Hello this is a box</span><br>
+    <div class="container">
+        <span class="inline">Hello this is a box</span>
+    </div>
+
+    <h1>Hello this is a box</h1>
+    <h1>Hello this is a box</h1>
+    <div class="cont-rem-em">
+        <h1>Here we will Learn About em And rem.</h1>
+        <div class="cont-em">
+            This is parent tag. Here Font will be remain same as we add in class i mean if we add font 16px here will
+            remain 16
+            <p class="em">Child tag. Here font will be change or you can say that font will inherit from parent tag if
+                we use em size unit in font size of this child font size. if we give font size 16 px in parent tag and
+                we give 2em in child this will increase with 2*16 and if we give 3em this will be 3*16 and also if we
+                give 0.3*16 also show small</p>
+        </div>
+        <div class="cont-rem">
+            <h3>Here we will see To rem</h3>
+
+            <p class="rem">Child tag. Here font will also change, but unlike em, rem is based on the root (html) font
+                size, not parent. For example, if the root html has font-size: 16px;
+                - 2rem = 2 * 16 = 32px
+                - 3rem = 3 * 16 = 48px
+                - 0.3rem = 0.3 * 16 = 4.8px (smaller)
+                So rem always refers to root font size and ignores parent inheritance.
+            </p>
+        </div>
+    </div>
+    <div class="cont-vmi-vmax">
+        <h1>Here we will learn about vmin & vmax</h1>
+        <div class="cont-vmin">
+            This is vmin
+        </div>
+        <div class="cont-vmax">
+
+        </div>
+    </div>
+    <div class="min-width">This set that this is min-width of this block and this is maximum width of this block</div>
+    <div class="parentpcntg"> Lorem ipsum dolor sit amet.
+        <p class="childpcntg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, voluptatum?</p>
+    </div>
+
 </body>
+
 </html>

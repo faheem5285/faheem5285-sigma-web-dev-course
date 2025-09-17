@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units Demo (Practical Guide)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #fafafa;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #333;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    .unit-block {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-left: 4px solid #007acc;
+      background: #f9f9f9;
+    }
+
+    .demo-box {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 8px;
+      background: #e6f7ff;
+      border: 1px solid #007acc;
+      border-radius: 4px;
+    }
+
+    /* --- COMMONLY USED UNITS --- */
+    .px { font-size: 20px; }
+    .rem { font-size: 2rem; }
+    .em  { font-size: 2em; }
+    .percent { width: 50%; }
+    .vw { font-size: 5vw; }
+    .vh { height: 20vh; }
+
+    /* --- LESS COMMON --- */
+    .ch { width: 20ch; }
+    .ex { font-size: 2ex; }
+
+    /* --- GRID --- */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+    }
+    .grid div {
+      background: #ddd;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    /* --- RARE/PRINT --- */
+    .pt { font-size: 20pt; }
+    .cm { width: 5cm; }
+    .mm { width: 50mm; }
+    .in { width: 2in; }
+    .pc { font-size: 2pc; }
+    .cap { font-size: 10cap; }
+    .ic { width: 10ic; }
+  </style>
+</head>
+<body>
+
+<h1>CSS Units Demo (Arranged by Use)</h1>
+
+<!-- MOST COMMON -->
+<section>
+  <h2>1. Commonly Used Units</h2>
+
+  <div class="unit-block px">
+    <strong>px (pixels)</strong><br>
+    ✅ When to use: For precise, fixed UI elements (icons, borders, shadows).<br>
+    ❌ When not: For responsive typography/layouts (not scalable).<br>
+    <span class="demo-box">20px text</span>
+  </div>
+
+  <div class="unit-block rem">
+    <strong>rem (root em)</strong><br>
+    ✅ When to use: For consistent typography and spacing (scales with root).<br>
+    ❌ When not: If you need scaling relative to parent only.<br>
+    <span class="demo-box">2rem text</span>
+  </div>
+
+  <div class="unit-block em">
+    <strong>em (element relative)</strong><br>
+    ✅ When to use: For spacing/margins that should scale with element font size.<br>
+    ❌ When not: In deep nesting (values can multiply unexpectedly).<br>
+    <span class="demo-box">2em text</span>
+  </div>
+
+  <div class="unit-block percent">
+    <strong>% (percentage)</strong><br>
+    ✅ When to use: For fluid layouts relative to parent size.<br>
+    ❌ When not: If parent has no defined size (becomes unpredictable).<br>
+    <div class="demo-box" style="width:50%;">50% width box</div>
+  </div>
+
+  <div class="unit-block vw">
+    <strong>vw (viewport width)</strong><br>
+    ✅ When to use: Responsive font sizes, full-width sections.<br>
+    ❌ When not: Very small/large screens (can make text unreadable).<br>
+    <span class="demo-box">5vw text</span>
+  </div>
+
+  <div class="unit-block vh">
+    <strong>vh (viewport height)</strong><br>
+    ✅ When to use: Fullscreen hero sections or modals.<br>
+    ❌ When not: Mobile browsers (100vh may ignore top/bottom bars).<br>
+    <div class="demo-box" style="height:20vh;">20vh box</div>
+  </div>
+</section>
+
+<!-- LESS COMMON -->
+<section>
+  <h2>2. Less Common but Useful</h2>
+
+  <div class="unit-block ch">
+    <strong>ch (character width)</strong><br>
+    ✅ When to use: Inputs/code blocks sized by character count.<br>
+    ❌ When not: For non-monospace fonts (varies too much).<br>
+    <div class="demo-box" style="width:20ch;">20ch wide</div>
+  </div>
+
+  <div class="unit-block ex">
+    <strong>ex (x-height)</strong><br>
+    ✅ When to use: Rarely, for fine-tuned text alignment.<br>
+    ❌ When not: Inconsistent across fonts/browsers.<br>
+    <span class="demo-box">2ex text</span>
+  </div>
+</section>
+
+<!-- GRID -->
+<section>
+  <h2>3. Grid & Layout Units</h2>
+
+  <div class="unit-block">
+    <strong>fr (fractional unit)</strong><br>
+    ✅ When to use: In CSS Grid for proportional layouts.<br>
+    ❌ When not: Outside grid (not supported elsewhere).<br>
+    <div class="grid">
+      <div>1fr</div>
+      <div>2fr</div>
+    </div>
+  </div>
+</section>
+
+<!-- RARE / PRINT -->
+<section>
+  <h2>4. Rare / Print-Oriented Units</h2>
+
+  <div class="unit-block pt">
+    <strong>pt (points)</strong><br>
+    ✅ When to use: Print stylesheets.<br>
+    ❌ When not: On screens (inconsistent).<br>
+    <span class="demo-box">20pt text</span>
+  </div>
+
+  <div class="unit-block cm">
+    <strong>cm (centimeters)</strong><br>
+    ✅ When to use: Print layouts.<br>
+    ❌ When not: Web screens (no consistency).<br>
+    <div class="demo-box" style="width:5cm;">5cm wide</div>
+  </div>
+
+  <div class="unit-block mm">
+    <strong>mm (millimeters)</strong><br>
+    ✅ When to use: Print layouts.<br>
+    ❌ When not: Web screens.<br>
+    <div class="demo-box" style="width:50mm;">50mm wide</div>
+  </div>
+
+  <div class="unit-block in">
+    <strong>in (inches)</strong><br>
+    ✅ When to use: Print (physical size).<br>
+    ❌ When not: Web.<br>
+    <div class="demo-box" style="width:2in;">2in wide</div>
+  </div>
+
+  <div class="unit-block pc">
+    <strong>pc (picas)</strong><br>
+    ✅ When to use: Historical print media.<br>
+    ❌ When not: Web.<br>
+    <span class="demo-box">2pc text</span>
+  </div>
+
+  <div class="unit-block cap">
+    <strong>cap (capital height)</strong><br>
+    ✅ When to use: Typography-sensitive designs.<br>
+    ❌ When not: Browser support is still limited.<br>
+    <span class="demo-box">10cap text</span>
+  </div>
+
+  <div class="unit-block ic">
+    <strong>ic (ideographic character unit)</strong><br>
+    ✅ When to use: East Asian layouts (Chinese, Japanese).<br>
+    ❌ When not: Latin-based designs (unnecessary).<br>
+    <div class="demo-box" style="width:10ic;">10ic wide</div>
+  </div>
+</section>
+
+</body>
+</html>

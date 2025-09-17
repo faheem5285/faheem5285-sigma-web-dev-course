@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Specificity & Cascade</title>
+    <style>
+        /* !important > Inline > ID > Class > Element. */
+        /* Cascade (Who Wins When Rules Clash?)
+
+When two or more CSS rules try to style the same element, the cascade decides which one wins. The browser checks in this order:
+
+!important → beats everything else.
+
+Where the style comes from → inline (inside HTML) > internal (in <style>) > external (CSS file) > browser default.
+
+Specificity → how detailed the selector is (see below).
+
+Order in the file → if still tied, the last rule wins.
+
+🎯 Specificity (How Strong is the Selector?)
+
+Think of specificity as points:
+
+Inline style → 1000 points
+
+ID selector (#header) → 100 points
+
+Class, attribute, pseudo-class (.btn, [type=text], :hover) → 10 points
+
+Element, pseudo-element (div, h1, ::after) → 1 point */
+       
+        /* step 4 */
+/* #idselecter{
+    background-color: blueviolet;
+ } */
+ /*Examples for  step 2 and 3  */
+  .simple {
+            background-color: rgb(4, 40, 61);
+        }
+/*Examples for  step 2 and 3  */
+        .green {
+            background-color: green;
+        }
+/* Examples for  step 2 and 3  */
+        .blue {
+            background-color: blue;
+        }
+/* step 6  */
+        /* .red {
+            background-color: red !important;
+        } */
+/* Examples for  step 2 and 3  */
+        .yellow {
+            background-color: yellow;
+        }
+/* step 2 */
+        /* these are attribute selecters */
+        [data-a="myData"] {
+            background-color: rgb(224, 0, 187);
+        }
+/* step 1 */
+        h1 {
+            background-color: rgb(63, 1, 58) ;
+        }
+        /* Step 7 */
+        /* Thats mean if <a> tag with both classes class1 and class2, and also have an href attributte, then change color otherwise dont do anything */
+        a.class1.class2[href]:hover{
+            background-color: rgb(25, 255, 4);
+        }
+        .class1{
+            font-size: 50px;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1 class="simple green blue red yellow">This is Heading</h1>
+    <h1 class="simple green blue red yellow" data-a="myData">attribute selecters</h1>
+    <h1 class="simple green blue red yellow" id="idselecter" data-a="myData">attribute selecters</h1>
+    <h1 class="simple green blue red yellow" id="idselecter" data-a="myData">!important</h1>
+    <!-- step 5 -->
+      <h1 class="simple green blue red yellow" id="idselecter" data-a="myData" style="background-color: aqua;">Inline Style</h1>
+      <a href="http://www.google.com" class="class1 class2">Google</a>
 </body>
+
 </html>
