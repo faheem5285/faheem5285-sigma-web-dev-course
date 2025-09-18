@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* div is block element but we are here changing block element into inline element*/
+        /* in if we apply only display:inline css this will and add padding from all side this will not work on top side of block of element  */
+        .box1 {
+
+            border: 2px solid brown;
+            padding: 25px;
+            display: inline;
+            margin: 25px;
+        }
+
+        .box2 {
+
+            border: 2px solid rgb(120, 42, 165);
+            padding: 25px;
+            margin: 25px;
+            display: inline;
+
+        }
+
+        .box3 {
+            border: 2px solid rgb(186, 204, 28);
+            padding: 25px;
+        }
+
+        /* difference between display and visibility propert */
+        .box4 {
+            background-color: blue;
+            border: 2px solid rgb(120, 42, 165);
+            padding: 25px;
+            margin: 25px;
+            display: none;
+            /* display: none property remove the whole box are element */
+        }
+
+        .box5 {
+            background-color: rgb(129, 241, 0);
+            border: 2px solid rgb(0, 250, 237);
+            padding: 25px;
+            margin: 25px;
+            visibility: hidden;
+            /* visibility: hidden property  hidden element and not remove the whole box. remain its place blank*/
+
+        }
+
+        .box6 {
+            background-color: rgb(129, 241, 0);
+            border: 2px solid rgb(0, 250, 237);
+            padding: 25px;
+            margin: 25px;
+        }
+        .box7{
+            background-color: blueviolet;
+            border: 2px solid rgb(0, 250, 237);
+            display: inline-block; /**/
+            justify-content: center;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!-- changing block elements in inline element-->
+    <div class="box1">Hello i am a block Element</div>
+    <div class="box2">Lorem ipsum dolor sit amet.</div>
+    <div class="box3">Lorem ipsum dolor sit amet.</div>
+    <div class="box4">Lorem ipsum dolor sit amet.</div>
+    <div class="box5">Lorem ipsum dolor sit amet.</div>
+    <div class="box6">Lorem ipsum dolor sit amet.</div>
+    <div class="box7">Lorem ipsum dolor sit amet.</div>
+
 </body>
+
 </html>

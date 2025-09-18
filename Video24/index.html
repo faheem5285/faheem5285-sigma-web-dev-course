@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Shadows and Outlines</title>
+    <style>
+        *{
+            margin: 5px0;
+            padding: 0;
+        }
+        .div1 {
+            box-shadow: 0px 0 5px 10px rgba(252, 140, 11, 0.521);
+        }
+
+        .div2 {
+            padding: 20px;
+            background-color: aquamarine;
+            box-shadow: 0 0 50px 10px green inset;
+        }
+        .textshadow{
+            text-shadow: 10px 10px 5px yellow;
+        }
+        .outline{
+            margin: 60px;
+            outline: 2px solid red;
+            outline-offset: 20px;
+            outline-style: dashed;
+        }
+        .border{
+            margin: 30px;
+            padding: 10px;
+           border: 2px solid yellow;
+           border-radius: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="div1">
+        <div class="div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur suscipit molestiae
+            labore, possimus numquam repellendus dolore unde dolorum tenetur exercitationem assumenda esse laudantium in
+            ipsum. Ipsam officiis debitis architecto sed!</div>
+    </div>
+    <div class="textshadow">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta odio, aliquam doloremque nobis laudantium quasi error velit ea exercitationem consectetur facilis nemo harum possimus esse.</div>
+
+    <br><br><br><br>
+    <div class="outline">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quod esse nulla quis eos officiis veniam animi, saepe excepturi. Enim ex dignissimos laboriosam.</div>
+    <br><br><br><br>
+    <div class="border">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quod esse nulla quis eos officiis veniam animi, saepe excepturi. Enim ex dignissimos laboriosam.</div>
 </body>
+
 </html>
