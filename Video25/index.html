@@ -1,11 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>navbar and Styling Lists using CSS</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav ul li:hover {
+            background-color: brown;
+        }
+
+        .nav ul {
+            background-color: aqua;
+            align-items: center;
+            justify-content: flex-end;
+            display: flex;
+
+        }
+
+        .nav ul li {
+            margin: 2px;
+            list-style: none;
+            padding: 10px;
+            text-align: center;
+            background-color: blue;
+        }
+
+        .image {
+            width: 80px;
+        }
+
+        .nav ul li.image {
+            margin-left: auto;
+        }
+
+        .nav1 ul li {
+            background-color: aquamarine;
+            list-style: none;
+        }
+
+        .nav2 ul li {
+            background-color: rgb(255, 239, 9);
+            list-style-position: inside;
+            border: 2px solid green;
+            list-style: devanagari;
+        }
+
+        .nav3 ul li {
+            background-color: rgb(75, 255, 4);
+
+            list-style-position: inside;
+            border: 2px solid green;
+            list-style-image: url(https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif);
+
+        }
+
+        .nav4 ul li {
+            background-color: rgb(55, 179, 6);
+
+            list-style-position: inside;
+            border: 2px solid green;
+            list-style: "😁"
+        }
+
+        .nav5 ul li {
+            background-color: rgb(55, 179, 6);
+            border: 2px solid green;
+            list-style: disc inside url(https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif)
+        }
+    </style>
 </head>
+
 <body>
-    
+    <nav class="nav">
+        <ul>
+
+            <li><img class="image" src="https://bssuniversal.com/wp-content/uploads/2024/03/bss-logo.png" alt=""></li>
+            <a href="">
+                <li>Home</li>
+            </a>
+            <a href="">
+                <li>About</li>
+            </a>
+            <a href="">
+                <li>Services</li>
+            </a>
+            <a href="">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav><br>
+    <nav class="nav1">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav><br>
+    <nav class="nav2">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <br>
+    <nav class="nav4">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <br>
+    <nav class="nav3">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <nav class="nav5">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
 </body>
+
 </html>
