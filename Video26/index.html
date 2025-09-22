@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .div3{
+            width: 540px;
+            border: 2px solid rgb(26, 13, 216);
+            height: 100px;
+        }
+       
+        .div {
+            width: 540px;
+            border: 2px solid rgb(128, 0, 38);
+            overflow: auto;  /* if text more then given size then show scroll bar */
+            height: 100px;
+        }
+
+        .div1 {
+            overflow: scroll;/* if text more then or not given size show scroll bar */
+            border: 2px solid rgb(0, 128, 128);
+            height: 100px;
+             width: 540px;
+        }
+        .div4 {
+            border: 2px solid green;
+            height: 100px;
+             width: 540px;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow:ellipsis;
+        }
+        .div5 {
+            overflow-x: auto;
+            overflow-y: scroll;
+            width: 240px;
+            border: 2px solid green;
+            height: 100px;
+        }
+        /* overflow of both div5 and div6 is same  */
+          .div6 {
+            overflow: auto scroll;
+            width: 240px;
+            border: 2px solid green;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
 </head>
+
 <body>
+      <div class="div3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam velit delectus suscipit
+        molestiae cum minus, quae eos sit voluptatum? Asperiores soluta fuga, blanditiis ipsum recusandae dolores eos
+        harum, veritatis sit accusantium pariatur hic reprehenderit dolorem corrupti ratione esse. Quae ex suscipit
+        dicta nobis perspiciatis veritatis sequi nihil neque iure accusamus odit, animi quibusdam libero repudiandae
+        aliquam voluptate dolorem dolores cumque voluptatem. Eius in distinctio iure?</div>
+
+    <br><br>
+    <div class="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam velit delectus suscipit
+        molestiae cum minus, quae eos sit voluptatum? Asperiores soluta fuga, blanditiis ipsum recusandae dolores eos
+        harum, veritatis sit accusantium pariatur hic reprehenderit dolorem corrupti ratione esse. Quae ex suscipit
+        dicta nobis perspiciatis veritatis sequi nihil neque iure accusamus odit, animi quibusdam libero repudiandae
+        aliquam voluptate dolorem dolores cumque voluptatem. Eius in distinctio iure?</div>
+
+    <br><br>
+    <div class="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam velit delectus suscipit
+        molestiae cum minus, quae eos sit voluptatum? Asperiores soluta fuga, blanditiis ipsum recusandae dolores eos
+        harum, veritatis sit accusantium pariatur hic reprehenderit dolorem corrupti ratione esse. Quae ex </div>
+
+
+        <br><br>
+    <div class="div4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam velit delectus suscipit molestiae cum minus, quae eos sit voluptatum? Asperiores soluta fuga, blanditiis ipsum recusandae dolores eos harum, veritatis sit accusantium pariatur hic reprehenderit dolorem corrupti ratione esse. Quae ex suscipit dicta nobis perspiciatis veritatis sequi nihil neque iure accusamus odit, animi quibusdam libero repudiandae aliquam voluptate dolorem dolores cumque voluptatem. Eius in distinctio iure?</div>
+     <br><br>
+    <div class="div5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam velit delectus suscipit molestiae cum minus, quae eos sit voluptatum? Asperiores soluta fuga, blanditiis ipsum recusandae dolores eos harum, veritatis sit accusantium pariatur hic reprehenderit dolorem corrupti ratione esse. Quae ex suscipit dicta nobis perspiciatis veritatis sequi nihil neque iure accusamus odit, animi quibusdam libero repudiandae aliquam voluptate dolorem dolores cumque voluptatem. Eius in distinctio iure?</div> <br><br> 
+    <div class="div6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam velit delectus suscipit molestiae cum minus, quae eos sit voluptatum? Asperiores soluta fuga, blanditiis ipsum recusandae dolores eos harum, veritatis sit accusantium pariatur hic reprehenderit dolorem corrupti ratione esse. Quae ex suscipit dicta nobis perspiciatis veritatis sequi nihil neque iure accusamus odit, animi quibusdam libero repudiandae aliquam voluptate dolorem dolores cumque voluptatem. Eius in distinctio iure?</div> 
     
+
 </body>
+
 </html>
